@@ -94,7 +94,7 @@ async function createServer(root = process.cwd(), isProd = isProduction) {
 if (!isTest) {
   createServer().then(({ app }) =>
     app.listen(80, () => {
-      console.log('http://localhost:80: xxxxxxxx');
+      console.log('http://localhost:80');
     })
   );
 }

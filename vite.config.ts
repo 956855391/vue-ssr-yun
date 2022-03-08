@@ -1,6 +1,6 @@
 import path from 'path';
 import { UserConfig } from 'vite';
-import eslintPlugin from 'vite-plugin-eslint';
+// import eslintPlugin from 'vite-plugin-eslint';
 import vuePlugin from '@vitejs/plugin-vue';
 import Components from 'unplugin-vue-components/vite';
 import vueJsxPlugin from '@vitejs/plugin-vue-jsx';
@@ -15,10 +15,10 @@ export default ({ command }) => {
     plugins: [
       vuePlugin(),
       vueJsxPlugin(),
-      eslintPlugin({
-        cache: false,
-        include: ['src/**/*.vue', 'src/**/*.ts', 'src/**/*.tsx']
-      }),
+      // eslintPlugin({
+      //   cache: false,
+      //   include: ['src/**/*.vue', 'src/**/*.ts', 'src/**/*.tsx']
+      // }),
       unocss({
         presets: [presetMini()]
       }),
@@ -27,6 +27,7 @@ export default ({ command }) => {
         directoryAsNamespace: true
       }),
       AutoImport({
+        imports: ['vue', 'vue-router', 'pinia'],
         resolvers: [ElementPlusResolver({ ssr: true })]
       })
     ],
@@ -43,7 +44,7 @@ export default ({ command }) => {
   if (command === 'build') {
     config.plugins.push(
       visualizer({
-        open: true,
+        open: false,
         gzipSize: true,
         brotliSize: true
       })

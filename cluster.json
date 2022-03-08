@@ -1,0 +1,14 @@
+[
+  {
+    "name": "vue-ssr",
+    "script": "npm",
+    "cwd": "/data/vue-ssr-yun/",
+    "args": "run serve",
+    "node_args": [],
+    "log_date_format": "YYYY-MM-DD HH:mm:SS Z",
+    "instances": "1",
+    "exec_mode": "fork",
+    "watch": false,
+    "restart_delay": 3000
+  }
+]

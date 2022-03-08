@@ -2,7 +2,6 @@ declare const React: string;
 declare module '*.json';
 declare module '*.png';
 declare module '*.jpg';
-declare module 'element-plus/lib/index.esm';
 
 declare namespace NodeJS {
   // eslint-disable-next-line
@@ -16,5 +15,8 @@ declare namespace NodeJS {
 }
 
 interface Window {
+  Elastic: any;
+  Expo: any;
+  TimelineMax: any;
   __INITIAL_STATE__: any;
 }
